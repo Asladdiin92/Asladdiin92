@@ -1,6 +1,6 @@
 # Hi — I'm Asladdiin Abduqaadir 👋
 
-IT student, freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply engineering to digitize resources for my community.
+IT student,freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply engineering to digitize resources for my community.
 
 ---
 
