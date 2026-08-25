@@ -1,33 +1,58 @@
-<svg width="1000" height="300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background gradient -->
+<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1a2435;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f293d;stop-opacity:1" />
     </linearGradient>
+
+    <!-- Header Text Gradient -->
     <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#79c0ff;stop-opacity:1" />
     </linearGradient>
+
+    <!-- Subtitle Pill Badge Gradient -->
+    <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#388bfd;stop-opacity:0.12" />
+    </linearGradient>
   </defs>
-  
-  <!-- Background -->
-  <rect width="1000" height="300" fill="url(#bgGradient)"/>
-  
-  <!-- Decorative circles -->
-  <circle cx="150" cy="50" r="80" fill="#58a6ff" opacity="0.1"/>
-  <circle cx="850" cy="250" r="100" fill="#79c0ff" opacity="0.1"/>
-  
-  <!-- Main heading -->
-  <text x="500" y="120" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" font-family="Arial, sans-serif">
+
+  <!-- Outer Card Frame with Rounded Corners & GitHub Dark Border -->
+  <rect width="1000" height="300" rx="16" fill="url(#bgGradient)" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Ambient Glow Effects -->
+  <circle cx="120" cy="60" r="130" fill="#58a6ff" opacity="0.08"/>
+  <circle cx="880" cy="240" r="140" fill="#1f6feb" opacity="0.12"/>
+
+  <!-- Minimal Decorative Grid Guides -->
+  <line x1="60" y1="0" x2="60" y2="300" stroke="#30363d" stroke-width="1" opacity="0.3"/>
+  <line x1="940" y1="0" x2="940" y2="300" stroke="#30363d" stroke-width="1" opacity="0.3"/>
+
+  <!-- Developer Terminal Accents -->
+  <circle cx="85" cy="45" r="6" fill="#ff5f56" opacity="0.85"/>
+  <circle cx="105" cy="45" r="6" fill="#ffbd2e" opacity="0.85"/>
+  <circle cx="125" cy="45" r="6" fill="#27c93f" opacity="0.85"/>
+
+  <!-- Main Name Title -->
+  <text x="85" y="115" font-size="50" font-weight="800" fill="url(#textGradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.5">
     Asladdiin Abduqaadir
   </text>
-  
-  <!-- Subtitle -->
-  <text x="500" y="180" font-size="28" text-anchor="middle" fill="#8b949e" font-family="Arial, sans-serif">
- IT professional
+
+  <!-- Role & Institution Pill Badge -->
+  <rect x="85" y="136" width="530" height="34" rx="17" fill="url(#badgeGradient)" stroke="#388bfd" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="105" y="158" font-size="15" font-weight="600" fill="#79c0ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    IT Student @ Haramaya University  •  Freelance Developer
   </text>
-  
-  <!-- Decorative line -->
-  <line x1="300" y1="210" x2="700" y2="210" stroke="#58a6ff" stroke-width="2" opacity="0.5"/>
+
+  <!-- Divider Line -->
+  <line x1="85" y1="192" x2="880" y2="192" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Structured Multi-line Paragraph -->
+  <text x="85" y="222" font-size="16" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <tspan x="85" dy="0" fill="#c9d1d9" font-weight="500">Community-minded problem solver from Oromia, Ethiopia.</tspan>
+    <tspan x="85" dy="26" fill="#8b949e">Building practical software, learning new tech, and applying software engineering to digitize local resources.</tspan>
+  </text>
 </svg>
