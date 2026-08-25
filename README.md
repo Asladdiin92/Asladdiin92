@@ -1,6 +1,8 @@
+![Header](header.svg)
+
 # Hi — I'm Asladdiin Abduqaadir 👋
 
-IT student,freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply engineering to digitize resources for my community.
+IT student,freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply engineering to digitize resources for[...]
 
 ---
 
@@ -69,7 +71,7 @@ IT student,freelance developer, and community-minded problem solver from Oromia,
 ## 🚀 Freelance & Collaboration
 - Open to freelance work (balancing with university studies).  
 - Areas I enjoy: small-to-medium web apps, desktop tools, education-focused software, digitization projects.  
-- I’m available for short contracts, project-based work, and mentorship on practical software engineering topics.
+- I'm available for short contracts, project-based work, and mentorship on practical software engineering topics.
 
 ---
 
@@ -95,13 +97,13 @@ Codeforces rating (please provide your handle so I can add the widget):
 
 ## 🤝 How to Work with Me
 - Best way to reach: Email — asladdiinabduqaadir@gmail.com or open an issue / discussion on my GitHub.  
-- If you have a small project or need a prototype, message me with scope, timeline, and tech preferences — I’ll respond with availability and an estimate.
+- If you have a small project or need a prototype, message me with scope, timeline, and tech preferences — I'll respond with availability and an estimate.
 
 ---
 
 ## ✨ Final Notes
-I build practical software with a focus on maintainability and local impact. If you want this README adjusted (shorter bio, more technical detail, different tone, or live badges), tell me what to change and I'll update it.
+I build practical software with a focus on maintainability and local impact. If you want this README adjusted (shorter bio, more technical detail, different tone, or live badges), tell me what to[...]
 
 ---
 
-Thank you for visiting — let’s build something useful.
+Thank you for visiting — let's build something useful.
