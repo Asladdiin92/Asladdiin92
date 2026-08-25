@@ -9,28 +9,6 @@
   </tr>
 </table>
 
-<table border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="75%" align="left" valign="middle">
-      <img 
-        src="https://raw.githubusercontent.com/Asladdiin92/Asladdiin92/main/header.svg" 
-        width="100%" 
-        height="200" 
-        style="object-fit: contain; max-height: 200px;" 
-        alt="Header Banner" 
-      />
-    </td>
-    <td width="25%" align="right" valign="middle">
-      <img 
-        src="https://raw.githubusercontent.com/Asladdiin92/Asladdiin92/main/download.png" 
-        width="100%" 
-        height="200" 
-        style="border-radius: 12px; object-fit: cover; max-height: 200px;" 
-        alt="Asladdiin Abduqaadir" 
-      />
-    </td>
-  </tr>
-</table>
 # Hi — I'm Asladdiin Abduqaadir 👋
 
 IT student, freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply software engineering to digitize local resources and build scalable tools.
