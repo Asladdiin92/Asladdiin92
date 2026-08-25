@@ -15,13 +15,10 @@
 ========================================= -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=20&duration=2800&pause=700&color=00FF94&center=true&vCenter=true&width=900&lines=%F0%9F%91%8B+Hi%2C+I%27m+Asladdiin+Abduqaadir;%F0%9F%92%BB+IT+Student+%7C+Freelance+Developer;%E2%9A%A1+I+build+practical+web+%26+desktop+software;%F0%9F%9B%A0%EF%B8%8F+Java+%7C+PHP+%7C+JavaScript+%7C+C%2B%2B+%7C+VB.NET;%F0%9F%8C%8D+Oromia%2C+Ethiopia+%7C+Open+to+Collaboration" alt="Typing SVG" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2500&pause=1000&color=35E139&background=06060600&center=true&vCenter=true&width=700&height=60&lines=Hi%2C+I'm+Asladdiin+Abduqaadir;IT+Student+%40+Haramaya+University;Freelance+Developer+%7C+Open+for+Projects;Building+Practical+Web%2C+Desktop+%26+Local+Tech;Java+%7C+PHP+%7C+JavaScript+%7C+C%2B%2B+%7C+VB.NET;Turning+grit+and+code+into+real-world+impact;Carrying+family+hopes+%26+serving+community;Striving+for+excellence+in+tech+%26+peace+in+faith;Driven+by+continuous%2C+raw+self-improvement;Oromia%2C+Ethiopia+%7C+Open+to+Collaboration" alt="Typing SVG" />
+  </a>
 </p>
-
-
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=The+five+boxing+wizards+jump+quickly" alt="Typing SVG" /></a>
-
-
 
 <h1 align="center">Hi 👋, I'm Asladdiin Abduqaadir</h1>
 <h3 align="center">IT Student • Freelance Developer • Community-Minded Problem Solver</h3>
