@@ -1,4 +1,4 @@
-<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="300" viewBox="0 0 1000 300" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -20,39 +20,39 @@
     </linearGradient>
   </defs>
 
-  <!-- Outer Card Frame with Rounded Corners & GitHub Dark Border -->
+  <!-- Outer Canvas Frame (1000x300) -->
   <rect width="1000" height="300" rx="16" fill="url(#bgGradient)" stroke="#30363d" stroke-width="2"/>
 
-  <!-- Ambient Glow Effects -->
+  <!-- Background Decorative Orbs -->
   <circle cx="120" cy="60" r="130" fill="#58a6ff" opacity="0.08"/>
   <circle cx="880" cy="240" r="140" fill="#1f6feb" opacity="0.12"/>
 
-  <!-- Minimal Decorative Grid Guides -->
+  <!-- Vertical Margin Guides -->
   <line x1="60" y1="0" x2="60" y2="300" stroke="#30363d" stroke-width="1" opacity="0.3"/>
   <line x1="940" y1="0" x2="940" y2="300" stroke="#30363d" stroke-width="1" opacity="0.3"/>
 
-  <!-- Developer Terminal Accents -->
-  <circle cx="85" cy="45" r="6" fill="#ff5f56" opacity="0.85"/>
-  <circle cx="105" cy="45" r="6" fill="#ffbd2e" opacity="0.85"/>
-  <circle cx="125" cy="45" r="6" fill="#27c93f" opacity="0.85"/>
+  <!-- Terminal Window Control Buttons -->
+  <circle cx="85" cy="40" r="6" fill="#ff5f56" opacity="0.85"/>
+  <circle cx="105" cy="40" r="6" fill="#ffbd2e" opacity="0.85"/>
+  <circle cx="125" cy="40" r="6" fill="#27c93f" opacity="0.85"/>
 
-  <!-- Main Name Title -->
-  <text x="85" y="115" font-size="50" font-weight="800" fill="url(#textGradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.5">
+  <!-- Name Title (60px) -->
+  <text x="85" y="105" font-size="60" font-weight="800" fill="url(#textGradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.5">
     Asladdiin Abduqaadir
   </text>
 
-  <!-- Role & Institution Pill Badge -->
-  <rect x="85" y="136" width="530" height="34" rx="17" fill="url(#badgeGradient)" stroke="#388bfd" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="105" y="158" font-size="15" font-weight="600" fill="#79c0ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <!-- Role Badge Container (Text: 22px, Badge Width: 710px, Height: 42px) -->
+  <rect x="85" y="124" width="710" height="42" rx="21" fill="url(#badgeGradient)" stroke="#388bfd" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="105" y="152" font-size="22" font-weight="600" fill="#79c0ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
     IT Student @ Haramaya University  •  Freelance Developer
   </text>
 
-  <!-- Divider Line -->
-  <line x1="85" y1="192" x2="880" y2="192" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Horizontal Divider Line -->
+  <line x1="85" y1="184" x2="880" y2="184" stroke="#30363d" stroke-width="1.5"/>
 
-  <!-- Structured Multi-line Paragraph -->
-  <text x="85" y="222" font-size="16" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <!-- Paragraph Description Split Cleanly Into Two 20px Lines -->
+  <text x="85" y="214" font-size="20" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
     <tspan x="85" dy="0" fill="#c9d1d9" font-weight="500">Community-minded problem solver from Oromia, Ethiopia.</tspan>
-    <tspan x="85" dy="26" fill="#8b949e">Building practical software, learning new tech, and applying software engineering to digitize local resources.</tspan>
+    <tspan x="85" dy="30" fill="#8b949e">Building practical software, learning tech &amp; digitizing local resources.</tspan>
   </text>
 </svg>
