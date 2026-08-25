@@ -9,6 +9,74 @@
   </tr>
 </table>
 
+
+
+<!-- Profile README for Asladdiin92 -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Asladdiin92/Asladdiin92/main/header.svg" alt="Header Banner" width="100%" />
+</p>
+
+<h1 align="center">Hi 👋, I'm Asladdiin Abduqaadir</h1>
+<h3 align="center">IT Student • Freelance Developer • Community-Minded Problem Solver</h3>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Asladdiin92&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/Asladdiin92?label=Followers&style=for-the-badge" alt="followers" />
+  <img src="https://img.shields.io/badge/Open%20to-Freelance-success?style=for-the-badge" alt="freelance" />
+  <img src="https://img.shields.io/badge/Location-Oromia%2C%20Ethiopia-orange?style=for-the-badge" alt="location" />
+</p>
+
+---
+
+### 🚀 About Me
+- 🎓 Information Technology Student — **Haramaya University**
+- 💼 Open to **software, web, and desktop** freelance projects
+- 🌱 Currently learning **Software Architecture, System Design, and Advanced Data Structures**
+- 🌍 Based in **Oromia, Ethiopia**
+
+---
+
+### 🧩 Code / ASCII Card
+
+```javascript
+const developer = {
+  name: "Asladdiin Abduqaadir",
+  role: "IT Student & Freelance Developer",
+  languages: ["Java", "PHP", "JavaScript", "C++", "VB.NET", "SQL"],
+  interests: ["Education Tech", "Desktop Utilities", "Local Digitization"],
+  motto: "Build practical software that solves real community problems."
+};
+```
+
+<pre>
+╔══════════════════════════════════════════════════════╗
+║   Build. Learn. Share. Improve. Repeat.             ║
+╚══════════════════════════════════════════════════════╝
+</pre>
+
+---
+
+### 🛠️ Tech Stack
+
+<p>
+  <img src="https://cdn.simpleicons.org/java" alt="Java" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/php" alt="PHP" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/html5" alt="HTML5" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/css" alt="CSS3" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/cplusplus" alt="C++" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/dotnet" alt=".NET" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/mysql" alt="MySQL" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/mariadb" alt="MariaDB" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/git" alt="Git" width="32" height="32"/>
+  <img src="https://cdn.simpleicons.org/github" alt="GitHub" width="32" height="32"/>
+</p>
+
+---
+
+
+
 # Hi — I'm Asladdiin Abduqaadir 👋
 
 IT student, freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply software engineering to digitize local resources and build scalable tools.
