@@ -19,6 +19,9 @@
 </p>
 
 
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=The+five+boxing+wizards+jump+quickly" alt="Typing SVG" /></a>
+
+
 
 <h1 align="center">Hi 👋, I'm Asladdiin Abduqaadir</h1>
 <h3 align="center">IT Student • Freelance Developer • Community-Minded Problem Solver</h3>
