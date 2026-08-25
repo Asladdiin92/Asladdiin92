@@ -34,8 +34,6 @@
 
 ---
 
-### 🧩 Code / ASCII Card
-
 
 
 <pre>
