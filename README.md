@@ -10,6 +10,30 @@
 </table>
 
 
+<!-- =========================================
+     GitHub Profile README for Asladdiin92
+========================================= -->
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=20&duration=2800&pause=700&color=00FF94&center=true&vCenter=true&width=900&lines=%F0%9F%91%8B+Hi%2C+I%27m+Asladdiin+Abduqaadir;%F0%9F%92%BB+IT+Student+%7C+Freelance+Developer;%E2%9A%A1+I+build+practical+web+%26+desktop+software;%F0%9F%9B%A0%EF%B8%8F+Java+%7C+PHP+%7C+JavaScript+%7C+C%2B%2B+%7C+VB.NET;%F0%9F%8C%8D+Oromia%2C+Ethiopia+%7C+Open+to+Collaboration" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Asladdiin92/Asladdiin92/main/header.svg" width="100%" alt="Header Banner" />
+</p>
+
+<h1 align="center">Hi 👋, I'm Asladdiin Abduqaadir</h1>
+<h3 align="center">IT Student • Freelance Developer • Community-Minded Problem Solver</h3>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Asladdiin92&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/Asladdiin92?label=Followers&style=for-the-badge" alt="Followers" />
+  <img src="https://img.shields.io/badge/Open%20to-Freelance-success?style=for-the-badge" alt="Open to Freelance" />
+  <img src="https://img.shields.io/badge/Location-Oromia%2C%20Ethiopia-orange?style=for-the-badge" alt="Location" />
+</p>
+
+---
+
 
 <!-- Profile README for Asladdiin92 -->
 
