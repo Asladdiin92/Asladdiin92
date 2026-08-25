@@ -36,18 +36,11 @@
 
 ### 🧩 Code / ASCII Card
 
-javascript
-const developer = {
-  name: "Asladdiin Abduqaadir",
-  role: "IT Student & Freelance Developer",
-  languages: ["Java", "PHP", "JavaScript", "C++", "VB.NET", "SQL"],
-  interests: ["Education Tech", "Desktop Utilities", "Local Digitization"],
-  motto: "Build practical software that solves real community problems."
-};
+
 
 <pre>
 ╔══════════════════════════════════════════════════════╗
-║   Build. Learn. Share. Improve. Repeat.             ║
+ ║  Build. Learn. Share. Improve. Repeat.             ║
 ╚══════════════════════════════════════════════════════╝
 </pre>
 
