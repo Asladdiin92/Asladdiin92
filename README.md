@@ -13,9 +13,6 @@
 
 <!-- Profile README for Asladdiin92 -->
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Asladdiin92/Asladdiin92/main/header.svg" alt="Header Banner" width="100%" />
-</p>
 
 <h1 align="center">Hi 👋, I'm Asladdiin Abduqaadir</h1>
 <h3 align="center">IT Student • Freelance Developer • Community-Minded Problem Solver</h3>
@@ -75,13 +72,6 @@ const developer = {
 
 ---
 
-
-
-# Hi — I'm Asladdiin Abduqaadir 👋
-
-IT student, freelance developer, and community-minded problem solver from Oromia, Ethiopia. I build practical software, teach myself new technologies, and apply software engineering to digitize local resources and build scalable tools.
-
----
 
 ## 🔭 Current Focus
 * **Education:** Information Technology Student — Haramaya University
