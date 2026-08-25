@@ -20,12 +20,12 @@
   
   <!-- Main heading -->
   <text x="500" y="120" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" font-family="Arial, sans-serif">
-    Asladdiin92
+    Asladdiin Abduqaadir
   </text>
   
   <!-- Subtitle -->
   <text x="500" y="180" font-size="28" text-anchor="middle" fill="#8b949e" font-family="Arial, sans-serif">
-    Full Stack Developer
+ IT professional
   </text>
   
   <!-- Decorative line -->
