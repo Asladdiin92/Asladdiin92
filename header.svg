@@ -1,0 +1,33 @@
+<svg width="1000" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2435;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#79c0ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="150" cy="50" r="80" fill="#58a6ff" opacity="0.1"/>
+  <circle cx="850" cy="250" r="100" fill="#79c0ff" opacity="0.1"/>
+  
+  <!-- Main heading -->
+  <text x="500" y="120" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" font-family="Arial, sans-serif">
+    Asladdiin92
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="180" font-size="28" text-anchor="middle" fill="#8b949e" font-family="Arial, sans-serif">
+    Full Stack Developer
+  </text>
+  
+  <!-- Decorative line -->
+  <line x1="300" y1="210" x2="700" y2="210" stroke="#58a6ff" stroke-width="2" opacity="0.5"/>
+</svg>
