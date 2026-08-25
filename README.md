@@ -36,7 +36,7 @@
 
 ### 🧩 Code / ASCII Card
 
-```javascript
+javascript
 const developer = {
   name: "Asladdiin Abduqaadir",
   role: "IT Student & Freelance Developer",
@@ -44,7 +44,6 @@ const developer = {
   interests: ["Education Tech", "Desktop Utilities", "Local Digitization"],
   motto: "Build practical software that solves real community problems."
 };
-```
 
 <pre>
 ╔══════════════════════════════════════════════════════╗
