@@ -38,17 +38,6 @@
 <!-- Profile README for Asladdiin92 -->
 
 
-<h1 align="center">Hi 👋, I'm Asladdiin Abduqaadir</h1>
-<h3 align="center">IT Student • Freelance Developer • Community-Minded Problem Solver</h3>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Asladdiin92&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/Asladdiin92?label=Followers&style=for-the-badge" alt="followers" />
-  <img src="https://img.shields.io/badge/Open%20to-Freelance-success?style=for-the-badge" alt="freelance" />
-  <img src="https://img.shields.io/badge/Location-Oromia%2C%20Ethiopia-orange?style=for-the-badge" alt="location" />
-</p>
-
----
 
 ### 🚀 About Me
 - 🎓 Information Technology Student — **Haramaya University**
