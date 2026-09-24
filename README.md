@@ -114,14 +114,20 @@ Haramaya University
 
 ---
 
-## 📈 GitHub
+## 📈 GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Asladdiin92&show_icons=true&hide_border=true&rank_icon=github" alt="Asladdiin's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Asladdiin92&show_icons=true&hide_border=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="Asladdiin GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Asladdiin92&layout=compact&hide_border=true&theme=tokyonight" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Asladdiin92&layout=compact&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Asladdiin92&layout=donut&hide_border=true&theme=tokyonight" alt="Top Languages Donut" />
+  <img src="https://streak-stats.demolab.com/?user=Asladdiin92&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Asladdiin92&bg_color=1a1b27&color=7aa2f7&line=7dcfff&point=bb9af7&area=true&hide_border=true&theme=tokyo-night" alt="GitHub Activity Graph" />
 </p>
 
 ---
