@@ -326,10 +326,28 @@ def write_featured_projects(repositories: list[dict]) -> None:
     cards = []
     for index, repository in enumerate(featured):
         x = 24 + index * 270
-        name = escape(repository["name"][:24])
-        description = escape(repository["description"][:58])
+        name = escape(repository["name"][:21] + ("..." if len(repository["name"]) > 21 else ""))
+        words = repository["description"].split()
+        description_lines = []
+        current_line = ""
+        for word in words:
+            candidate = f"{current_line} {word}".strip()
+            if len(candidate) > 34 and current_line:
+                description_lines.append(current_line)
+                current_line = word
+            else:
+                current_line = candidate
+            if len(description_lines) == 1:
+                break
+        if current_line and len(description_lines) < 2:
+            description_lines.append(current_line)
+        description_lines = [escape(line) for line in description_lines[:2]]
         url = escape(repository["html_url"], quote=True)
-        cards.append(f'<a href="{url}"><rect x="{x}" y="52" width="250" height="120" rx="8" fill="#24283b"/><text x="{x + 16}" y="78" fill="#7dcfff" font-family="Arial, sans-serif" font-size="14" font-weight="700">{name}</text><text x="{x + 16}" y="102" fill="#c0caf5" font-family="Arial, sans-serif" font-size="11">{description}</text><text x="{x + 16}" y="154" fill="#9ece6a" font-family="Arial, sans-serif" font-size="11">View project →</text></a>')
+        description_svg = "".join(
+            f'<tspan x="{x + 16}" dy="{index * 16}">{line}</tspan>'
+            for index, line in enumerate(description_lines)
+        )
+        cards.append(f'<a href="{url}"><rect x="{x}" y="52" width="250" height="120" rx="8" fill="#24283b"/><text x="{x + 16}" y="78" fill="#7dcfff" font-family="Arial, sans-serif" font-size="14" font-weight="700">{name}</text><text x="{x + 16}" y="102" fill="#c0caf5" font-family="Arial, sans-serif" font-size="11">{description_svg}</text><text x="{x + 16}" y="154" fill="#9ece6a" font-family="Arial, sans-serif" font-size="11">View project →</text></a>')
     content = '<text x="24" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Featured Projects</text>' + "".join(cards)
     (OUTPUT_DIR / "featured-projects.svg").write_text(svg_document(content, 850, 190))
 
