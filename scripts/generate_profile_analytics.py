@@ -181,40 +181,28 @@ def write_chart_gallery(totals: Counter[str], repositories: list[dict], monthly:
     (OUTPUT_DIR / "chart-gallery.svg").write_text(svg_document(content, 1000, 430))
 
 
-def write_stats(repositories: list[dict], total_contributions: int) -> None:
-    stars = sum(repository["stargazers_count"] for repository in repositories)
-    forks = sum(repository["forks_count"] for repository in repositories)
-    metrics = [
-        ("Repositories", len(repositories), "#7aa2f7"),
-        ("Contributions", total_contributions, "#7dcfff"),
-        ("Stars", stars, "#9ece6a"),
-        ("Forks", forks, "#f7768e"),
-    ]
-    scale = max((value for _, value, _ in metrics), default=1) or 1
-    bars = []
-    for index, (label, value, color) in enumerate(metrics):
-        y = 155 + index * 25
-        bar_width = max(4, 520 * value / scale) if value else 4
-        bars.append(
-            f'<text x="32" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{label}</text>'
-            f'<rect x="135" y="{y}" width="520" height="14" rx="7" fill="#24283b"/>'
-            f'<rect x="135" y="{y}" width="{bar_width:.1f}" height="14" rx="7" fill="{color}"/>'
-            f'<text x="675" y="{y + 12}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{value}</text>'
+def write_stats(total_contributions: int, totals: Counter[str]) -> None:
+    colors = ["#7aa2f7", "#7dcfff", "#9ece6a", "#f7768e", "#bb9af7"]
+    top_languages = totals.most_common(5)
+    total_bytes = sum(count for _, count in top_languages) or 1
+    language_rows = []
+    for index, (language, count) in enumerate(top_languages):
+        y = 112 + index * 24
+        percent = count / total_bytes * 100
+        language_rows.append(
+            f'<text x="32" y="{y + 11}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{escape(language)}</text>'
+            f'<rect x="150" y="{y}" width="420" height="12" rx="6" fill="#24283b"/>'
+            f'<rect x="150" y="{y}" width="{max(4, 420 * percent / 100):.1f}" height="12" rx="6" fill="{colors[index]}"/>'
+            f'<text x="590" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{percent:.1f}%</text>'
         )
     content = f"""
-  <text x="32" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Metrics</text>
-  <text x="32" y="88" fill="#7aa2f7" font-family="Arial, sans-serif" font-size="28" font-weight="700">{len(repositories)}</text>
-  <text x="32" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Public repositories</text>
-  <text x="210" y="88" fill="#7dcfff" font-family="Arial, sans-serif" font-size="28" font-weight="700">{total_contributions}</text>
-  <text x="210" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Contributions this year</text>
-  <text x="410" y="88" fill="#9ece6a" font-family="Arial, sans-serif" font-size="28" font-weight="700">{stars}</text>
-  <text x="410" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Repository stars</text>
-  <text x="610" y="88" fill="#f7768e" font-family="Arial, sans-serif" font-size="28" font-weight="700">{forks}</text>
-  <text x="610" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Repository forks</text>
-  <text x="32" y="140" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">Relative comparison</text>
-  {"".join(bars)}
+  <text x="32" y="38" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Contributions &amp; Languages</text>
+  <text x="32" y="82" fill="#7dcfff" font-family="Arial, sans-serif" font-size="34" font-weight="700">{total_contributions}</text>
+    <text x="32" y="101" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">contributions in the last year</text>
+    <text x="150" y="92" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">Primary language distribution</text>
+  {"".join(language_rows)}
 """
-    (OUTPUT_DIR / "github-stats.svg").write_text(svg_document(content, 800, 270))
+    (OUTPUT_DIR / "github-stats.svg").write_text(svg_document(content, 800, 245))
 
 
 def write_languages(totals: Counter[str]) -> None:
@@ -482,17 +470,7 @@ def main() -> None:
     repositories = get_repositories()
     total_contributions, weeks, days, monthly = get_contributions()
     totals = language_totals(repositories)
-    write_stats(repositories, total_contributions)
-    write_languages(totals)
-    write_chart_gallery(totals, repositories, monthly)
-    write_repository_activity(repositories)
-    write_project_activity(repositories)
-    write_monthly_contributions(monthly)
-    write_repository_health(repositories)
-    write_technology_timeline(repositories)
-    write_featured_projects(repositories)
-    write_contributions(total_contributions, weeks)
-    write_streak(days)
+    write_stats(total_contributions, totals)
 
 
 if __name__ == "__main__":

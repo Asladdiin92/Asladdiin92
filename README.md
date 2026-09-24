@@ -30,11 +30,7 @@ I build practical backend and full-stack software focused on APIs, data, and rea
 </p>
 
 <p align="center">
-  <img src="./assets/chart-gallery.svg" width="100%" alt="Analytics gallery with pie, radial, bar, area, and pyramid charts" />
-</p>
-
-<p align="center">
-  <img src="./assets/featured-projects.svg" width="100%" alt="Featured projects with descriptions and links" />
+  <sub>Focused on primary language distribution and overall contribution activity.</sub>
 </p>
 
 <p align="center">
@@ -98,9 +94,7 @@ Tests, code coverage, deployment, and API documentation badges will be added to 
 
 ### 🎓 CCI Department Guidance
 
-Helps students identify suitable academic departments from their performance and preferences.
-
-**Focus:** Java • Spring Boot • Decision support
+Student department guidance system | Tech Stack: React, Express, Supabase, Node.js | [Repository](https://github.com/Asladdiin92/cci-department-guidance)
 
 [View Repository →](https://github.com/Asladdiin92/cci-department-guidance)
 
@@ -108,9 +102,7 @@ Helps students identify suitable academic departments from their performance and
 
 ### 💻 Personal Portfolio
 
-Personal portfolio for showcasing projects, skills, and development work.
-
-**Focus:** Web development • Responsive UI • Personal branding
+Developer portfolio and personal branding site | Tech Stack: HTML, CSS, JavaScript | [Live site](https://asladin.me)
 
 [View Repository →](https://github.com/Asladdiin92/portfolio)
 
@@ -118,9 +110,7 @@ Personal portfolio for showcasing projects, skills, and development work.
 
 ### 🔎 Blockchair T
 
-A data-focused application for exploring structured information and building practical tools around it.
-
-**Focus:** Data • Application development • Problem solving
+Structured-data exploration application | Tech Stack: C++, data processing, application design | [Repository](https://github.com/Asladdiin92/blockchair-t)
 
 [View Repository →](https://github.com/Asladdiin92/blockchair-t)
 
@@ -149,9 +139,7 @@ Haramaya University
 
 - **GitHub:** [@Asladdiin92](https://github.com/Asladdiin92)
 - **Email:** [asladdiinabduqaadir@gmail.com](mailto:asladdiinabduqaadir@gmail.com)
-- **X:** [@asladin15](https://x.com/asladin15)
-- **TikTok:** [@asladdiinabduqaadir](https://www.tiktok.com/@asladdiinabduqaadir)
-- **Facebook:** [Profile](https://web.facebook.com/share/p/1D5MaiDJFF/)
+- **Portfolio:** [asladin.me](https://asladin.me)
 
 I'm open to **collaboration, interesting software projects, and opportunities to learn and build useful products.**
 
