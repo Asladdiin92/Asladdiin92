@@ -8,6 +8,9 @@ Currently studying **Information Technology at Haramaya University** while build
 
 [![GitHub](https://img.shields.io/badge/GitHub-Asladdiin92-181717?style=flat-square&logo=github)](https://github.com/Asladdiin92)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:asladdiinabduqaadir@gmail.com)
+[![Analytics CI/CD](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml/badge.svg)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
+
+> Resume link coming soon.
 
 ---
 
@@ -21,6 +24,18 @@ Building full-stack applications with a focus on **Java & Spring Boot, REST APIs
 - Application architecture and system design
 - Full-stack web application development
 - Building practical solutions for real users
+
+## ✅ Engineering Signals
+
+[![Analytics workflow](https://img.shields.io/github/actions/workflow/status/Asladdiin92/Asladdiin92/update-profile-analytics.yml?label=CI%2FCD&logo=github-actions&logoColor=white)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
+
+Tests, code coverage, deployment, and API documentation badges will be added to projects that expose those checks and services.
+
+## 📌 Repository Strategy
+
+- **Spring Boot API:** [cci-department-guidance](https://github.com/Asladdiin92/cci-department-guidance)
+- **Full-stack application:** [portfolio](https://github.com/Asladdiin92/portfolio)
+- **Database-focused project:** [blockchair-t](https://github.com/Asladdiin92/blockchair-t)
 
 ---
 
@@ -116,15 +131,7 @@ Haramaya University
 </p>
 
 <p align="center">
-  <img src="./assets/top-languages.svg" width="100%" alt="Top programming languages by repository" />
-</p>
-
-<p align="center">
   <img src="./assets/repository-activity.svg" width="100%" alt="Top repositories ranked by stars and forks" />
-</p>
-
-<p align="center">
-  <img src="./assets/project-activity.svg" width="100%" alt="Recently updated repositories with languages, sizes, and open issues" />
 </p>
 
 <p align="center">
@@ -132,27 +139,8 @@ Haramaya University
 </p>
 
 <p align="center">
-  <img src="./assets/repository-health.svg" width="100%" alt="Repository health summary showing active repositories, archived repositories, issues, and forks" />
-</p>
-
-<p align="center">
-  <img src="./assets/technology-timeline.svg" width="100%" alt="Technology activity over time based on repository updates" />
-</p>
-
-<p align="center">
   <img src="./assets/featured-projects.svg" width="100%" alt="Featured projects with descriptions and links" />
 </p>
-
-<table align="center">
-  <tr>
-    <td align="center" valign="middle">
-      <img src="./assets/contributions.svg" width="100%" alt="GitHub contribution activity graph" />
-    </td>
-    <td align="center" valign="middle">
-      <img src="./assets/streak.svg" width="100%" alt="GitHub current and longest contribution streaks" />
-    </td>
-  </tr>
-</table>
 
 <p align="center">
   <sub>Analytics are generated from GitHub data and updated automatically by GitHub Actions.</sub>
