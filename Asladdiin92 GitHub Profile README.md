@@ -123,6 +123,10 @@ Haramaya University
   <img src="./assets/repository-activity.svg" width="100%" alt="Top repositories ranked by stars and forks" />
 </p>
 
+<p align="center">
+  <img src="./assets/project-activity.svg" width="100%" alt="Recently updated repositories with languages, sizes, and open issues" />
+</p>
+
 <table align="center">
   <tr>
     <td align="center" valign="middle">

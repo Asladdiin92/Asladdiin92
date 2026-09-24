@@ -194,6 +194,40 @@ def write_repository_activity(repositories: list[dict]) -> None:
     (OUTPUT_DIR / "repository-activity.svg").write_text(svg_document(content, 850, height))
 
 
+def write_project_activity(repositories: list[dict]) -> None:
+    owned = [repository for repository in repositories if not repository.get("fork")]
+    recent = sorted(owned, key=lambda repository: repository.get("pushed_at") or "", reverse=True)[:6]
+    max_size = max((repository.get("size", 0) for repository in recent), default=1) or 1
+    rows = []
+    for index, repository in enumerate(recent):
+        y = 62 + index * 38
+        name = escape(repository["name"][:25])
+        language = escape(repository.get("language") or "Not specified")
+        pushed_at = (repository.get("pushed_at") or "Unknown")[:10]
+        issues = repository.get("open_issues_count", 0)
+        size = repository.get("size", 0)
+        size_width = max(4, 220 * size / max_size) if size else 4
+        rows.append(
+            f'<text x="32" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{name}</text>'
+            f'<text x="245" y="{y + 12}" fill="#7dcfff" font-family="Arial, sans-serif" font-size="12">{pushed_at}</text>'
+            f'<text x="360" y="{y + 12}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{language}</text>'
+            f'<rect x="520" y="{y}" width="220" height="12" rx="6" fill="#24283b"/>'
+            f'<rect x="520" y="{y}" width="{size_width:.1f}" height="12" rx="6" fill="#7aa2f7"/>'
+            f'<text x="750" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{size} KB</text>'
+            f'<text x="830" y="{y + 11}" fill="#f7768e" font-family="Arial, sans-serif" font-size="12">{issues} issues</text>'
+        )
+    content = (
+        '<text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Project Activity</text>'
+        '<text x="245" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Last push</text>'
+        '<text x="360" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Language</text>'
+        '<text x="520" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Repository size</text>'
+        '<text x="830" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Open issues</text>'
+        + "".join(rows)
+    )
+    height = 70 + max(1, len(recent)) * 38
+    (OUTPUT_DIR / "project-activity.svg").write_text(svg_document(content, 950, height))
+
+
 def write_contributions(total: int, weeks: list[int]) -> None:
     width, height = 1000, 250
     max_value = max(weeks) if weeks else 1
@@ -255,6 +289,7 @@ def main() -> None:
     write_stats(repositories, total_contributions)
     write_languages(language_totals(repositories))
     write_repository_activity(repositories)
+    write_project_activity(repositories)
     write_contributions(total_contributions, weeks)
     write_streak(days)
 
