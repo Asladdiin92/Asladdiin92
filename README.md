@@ -11,6 +11,35 @@ Currently studying **Information Technology at Haramaya University** while build
 
 ---
 
+## 📊 GitHub Analytics
+
+<p align="center">
+  <strong>Recent activity, repository overview, and language distribution</strong>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <img src="./assets/github-stats.svg" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
+    </td>
+    <td align="center" valign="middle">
+      <img src="./assets/top-languages.svg" alt="Top programming languages by repository" />
+    </td>
+  </tr>
+</table>
+
+<h3 align="center">Contribution Activity</h3>
+
+<p align="center">
+  <img src="./assets/contributions.svg" alt="GitHub contribution activity graph" />
+</p>
+
+<p align="center">
+  <sub>Analytics are generated from GitHub data and updated automatically by GitHub Actions.</sub>
+</p>
+
+---
+
 ## 🚀 Current Focus
 
 Building full-stack applications with a focus on **Java & Spring Boot, REST APIs, database design, system architecture, and practical problem solving.**
@@ -111,27 +140,6 @@ I am particularly interested in software that involves:
 **Bachelor of Science in Information Technology**
 
 Haramaya University
-
----
-
-## 📈 GitHub Analytics
-
-<table align="center">
-  <tr>
-    <td>
-      <img src="./assets/github-stats.svg" alt="Asladdiin GitHub Stats" />
-    </td>
-    <td>
-      <img src="./assets/top-languages.svg" alt="Top Languages by Repository" />
-    </td>
-  </tr>
-</table>
-
-### Dynamic Contribution Graph
-
-<p align="center">
-  <img src="./assets/contributions.svg" alt="Dynamic GitHub Contribution Graph" />
-</p>
 
 ---
 
