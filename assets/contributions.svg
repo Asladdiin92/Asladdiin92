@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250">
+  <rect width="100%" height="100%" rx="12" fill="#1a1b27"/>
+  <text x="32" y="48" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Contribution Activity</text>
+  <text x="32" y="88" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="14">The contribution graph will update automatically from GitHub.</text>
+  <text x="32" y="116" fill="#7dcfff" font-family="Arial, sans-serif" font-size="13">Run the “Update profile analytics” workflow to generate the current graph.</text>
+</svg>

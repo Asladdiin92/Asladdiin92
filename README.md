@@ -119,10 +119,10 @@ Haramaya University
 <table align="center">
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=Asladdiin92&show_icons=true&hide_border=true&theme=tokyonight&count_private=true&include_all_commits=true&custom_title=GitHub%20Overview" alt="Asladdiin GitHub Stats" />
+      <img src="./assets/github-stats.svg" alt="Asladdiin GitHub Stats" />
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Asladdiin92&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Top Languages by Repository" />
+      <img src="./assets/top-languages.svg" alt="Top Languages by Repository" />
     </td>
   </tr>
 </table>
@@ -130,11 +130,7 @@ Haramaya University
 ### Dynamic Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Asladdiin92&bg_color=1a1b27&color=7aa2f7&line=7dcfff&point=bb9af7&area=true&hide_border=true&custom_title=Contribution%20Activity" alt="Dynamic GitHub Contribution Graph" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Asladdiin92&theme=tokyonight&hide_border=true&background=1a1b27" alt="GitHub Contribution Streak" />
+  <img src="./assets/contributions.svg" alt="Dynamic GitHub Contribution Graph" />
 </p>
 
 ---
