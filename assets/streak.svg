@@ -1,6 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="145" viewBox="0 0 800 145">
   <rect width="100%" height="100%" rx="12" fill="#1a1b27"/>
-  <text x="32" y="48" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Streak</text>
-  <text x="32" y="84" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="14">Current and longest contribution streaks update automatically.</text>
-  <text x="32" y="112" fill="#7dcfff" font-family="Arial, sans-serif" font-size="13">Run the “Update profile analytics” workflow to refresh this card.</text>
+  
+  <text x="32" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Streak</text>
+  <line x1="200" y1="24" x2="200" y2="122" stroke="#414868"/>
+  <line x1="400" y1="24" x2="400" y2="122" stroke="#414868"/>
+  <text x="90" y="76" fill="#7aa2f7" font-family="Arial, sans-serif" font-size="30" font-weight="700">2</text>
+  <text x="48" y="101" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Current streak</text>
+  <text x="286" y="76" fill="#7dcfff" font-family="Arial, sans-serif" font-size="30" font-weight="700">4</text>
+  <text x="245" y="101" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Longest streak</text>
+  <text x="500" y="68" fill="#9ece6a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Keep building</text>
+  <text x="500" y="96" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Consistent progress matters.</text>
+
 </svg>
