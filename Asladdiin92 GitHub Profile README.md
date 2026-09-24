@@ -15,15 +15,6 @@ I build practical backend and full-stack software focused on APIs, data, and rea
 
 ---
 
-## 🚀 Current Focus
-
-Building practical applications with **Java, Spring Boot, REST APIs, and database design.**
-
-- Java and Spring Boot backend services
-- REST APIs and database-driven applications
-- Full-stack web development
-- Clean architecture and practical problem solving
-
 ## ✅ Engineering Signals
 
 [![Analytics workflow](https://img.shields.io/github/actions/workflow/status/Asladdiin92/Asladdiin92/update-profile-analytics.yml?label=CI%2FCD&logo=github-actions&logoColor=white)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
