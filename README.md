@@ -22,15 +22,11 @@ I build practical backend and full-stack software focused on APIs, data, and rea
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <strong>Recent activity, repository overview, and language distribution</strong>
+  <strong>Contribution activity and primary language distribution</strong>
 </p>
 
 <p align="center">
   <img src="./assets/github-stats.svg" width="100%" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
-</p>
-
-<p align="center">
-  <sub>Focused on primary language distribution and overall contribution activity.</sub>
 </p>
 
 <p align="center">
