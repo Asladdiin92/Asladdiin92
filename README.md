@@ -33,6 +33,22 @@ Currently studying **Information Technology at Haramaya University** while build
   <img src="./assets/project-activity.svg" width="100%" alt="Recently updated repositories with languages, sizes, and open issues" />
 </p>
 
+<p align="center">
+  <img src="./assets/monthly-contributions.svg" width="100%" alt="Monthly GitHub contribution trend" />
+</p>
+
+<p align="center">
+  <img src="./assets/repository-health.svg" width="100%" alt="Repository health summary showing active repositories, archived repositories, issues, and forks" />
+</p>
+
+<p align="center">
+  <img src="./assets/technology-timeline.svg" width="100%" alt="Technology activity over time based on repository updates" />
+</p>
+
+<p align="center">
+  <img src="./assets/featured-projects.svg" width="100%" alt="Featured projects with descriptions and links" />
+</p>
+
 <table align="center">
   <tr>
     <td align="center" valign="middle">

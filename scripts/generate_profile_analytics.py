@@ -8,6 +8,7 @@ import os
 import urllib.parse
 import urllib.request
 from collections import Counter
+from datetime import datetime
 from html import escape
 from pathlib import Path
 
@@ -51,7 +52,7 @@ def get_repositories() -> list[dict]:
     return repositories
 
 
-def get_contributions() -> tuple[int, list[int], list[int]]:
+def get_contributions() -> tuple[int, list[int], list[int], list[tuple[str, int]]]:
     query = """
     query($login: String!) {
       user(login: $login) {
@@ -61,6 +62,7 @@ def get_contributions() -> tuple[int, list[int], list[int]]:
             weeks {
               contributionDays {
                 contributionCount
+                                date
               }
             }
           }
@@ -75,11 +77,18 @@ def get_contributions() -> tuple[int, list[int], list[int]]:
     calendar = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]
     weeks = []
     days = []
+    monthly: Counter[str] = Counter()
     for week in calendar["weeks"]:
-        week_days = [day["contributionCount"] for day in week["contributionDays"]]
+        week_days = []
+        for day in week["contributionDays"]:
+            week_days.append(day["contributionCount"])
+            month = datetime.strptime(day["date"], "%Y-%m-%d").strftime("%b")
+            monthly[month] += day["contributionCount"]
         weeks.append(sum(week_days))
         days.extend(week_days)
-    return calendar["totalContributions"], weeks, days
+    month_order = [datetime.strptime(day["date"], "%Y-%m-%d").strftime("%b") for week in calendar["weeks"] for day in week["contributionDays"]]
+    ordered_months = list(dict.fromkeys(month_order))[-12:]
+    return calendar["totalContributions"], weeks, days, [(month, monthly[month]) for month in ordered_months]
 
 
 def language_totals(repositories: list[dict]) -> Counter[str]:
@@ -228,6 +237,106 @@ def write_project_activity(repositories: list[dict]) -> None:
     (OUTPUT_DIR / "project-activity.svg").write_text(svg_document(content, 950, height))
 
 
+def write_monthly_contributions(monthly: list[tuple[str, int]]) -> None:
+    width, height = 900, 250
+    values = [value for _, value in monthly] or [0]
+    max_value = max(values) or 1
+    points = []
+    labels = []
+    for index, (month, value) in enumerate(monthly):
+        x = 48 + index * (804 / max(1, len(monthly) - 1))
+        y = 190 - (value / max_value * 120)
+        points.append(f"{x:.1f},{y:.1f}")
+        labels.append(f'<text x="{x:.1f}" y="214" text-anchor="middle" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">{month}</text>')
+    line = " ".join(points)
+    content = f"""
+  <text x="32" y="32" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Monthly Contribution Trend</text>
+  <text x="32" y="56" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Contribution totals by month</text>
+  <line x1="48" y1="190" x2="852" y2="190" stroke="#414868"/>
+  <polygon points="48,190 {line} 852,190" fill="#7aa2f7" opacity="0.25"/>
+  <polyline points="{line}" fill="none" stroke="#7dcfff" stroke-width="3"/>
+  {"".join(labels)}
+"""
+    (OUTPUT_DIR / "monthly-contributions.svg").write_text(svg_document(content, width, height))
+
+
+def write_repository_health(repositories: list[dict]) -> None:
+    owned = [repository for repository in repositories if not repository.get("fork")]
+    metrics = [
+        ("Active", sum(not repository.get("archived") and not repository.get("disabled") for repository in owned), "#9ece6a"),
+        ("Archived", sum(repository.get("archived", False) for repository in owned), "#bb9af7"),
+        ("Open issues", sum(repository.get("open_issues_count", 0) for repository in owned), "#f7768e"),
+        ("Forks", sum(repository.get("forks_count", 0) for repository in owned), "#7dcfff"),
+    ]
+    scale = max((value for _, value, _ in metrics), default=1) or 1
+    bars = []
+    for index, (label, value, color) in enumerate(metrics):
+        y = 58 + index * 30
+        bars.append(
+            f'<text x="32" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{label}</text>'
+            f'<rect x="150" y="{y}" width="500" height="14" rx="7" fill="#24283b"/>'
+            f'<rect x="150" y="{y}" width="{max(4, 500 * value / scale) if value else 4:.1f}" height="14" rx="7" fill="{color}"/>'
+            f'<text x="670" y="{y + 12}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{value}</text>'
+        )
+    content = '<text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Repository Health</text>' + "".join(bars)
+    (OUTPUT_DIR / "repository-health.svg").write_text(svg_document(content, 800, 190))
+
+
+def write_technology_timeline(repositories: list[dict]) -> None:
+    owned = [repository for repository in repositories if not repository.get("fork")]
+    timeline: dict[str, Counter[str]] = {}
+    for repository in owned:
+        pushed_at = repository.get("pushed_at")
+        if pushed_at:
+            month = pushed_at[:7]
+            timeline.setdefault(month, Counter())[repository.get("language") or "Other"] += 1
+    months = sorted(timeline)[-8:]
+    languages = Counter()
+    for month in months:
+        languages.update(timeline[month])
+    top_languages = [language for language, _ in languages.most_common(4)]
+    colors = ["#7aa2f7", "#7dcfff", "#9ece6a", "#bb9af7"]
+    lines = []
+    max_value = max((timeline[month][language] for month in months for language in top_languages), default=1) or 1
+    for language, color in zip(top_languages, colors):
+        points = []
+        for index, month in enumerate(months):
+            x = 80 + index * (700 / max(1, len(months) - 1))
+            y = 175 - (timeline[month][language] / max_value * 105)
+            points.append(f"{x:.1f},{y:.1f}")
+        lines.append(f'<polyline points="{" ".join(points)}" fill="none" stroke="{color}" stroke-width="3"/><text x="{80 + len(months) * 0}" y="{52 + len(lines) * 18}" fill="{color}" font-family="Arial, sans-serif" font-size="12">{escape(language)}</text>')
+    labels = "".join(
+        f'<text x="{80 + index * (700 / max(1, len(months) - 1)):.1f}" y="198" text-anchor="middle" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">{month[5:]}</text>'
+        for index, month in enumerate(months)
+    )
+    content = f'<text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Technology Activity Over Time</text><text x="32" y="50" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">Repository updates grouped by primary language</text><line x1="80" y1="175" x2="780" y2="175" stroke="#414868"/>{"".join(lines)}{labels}'
+    (OUTPUT_DIR / "technology-timeline.svg").write_text(svg_document(content, 850, 225))
+
+
+def write_featured_projects(repositories: list[dict]) -> None:
+    owned = [
+        repository
+        for repository in repositories
+        if not repository.get("fork")
+        and repository.get("description")
+        and repository["name"].lower() != USERNAME.lower()
+    ]
+    featured = sorted(
+        owned,
+        key=lambda repository: (repository["stargazers_count"], repository.get("pushed_at") or ""),
+        reverse=True,
+    )[:3]
+    cards = []
+    for index, repository in enumerate(featured):
+        x = 24 + index * 270
+        name = escape(repository["name"][:24])
+        description = escape(repository["description"][:58])
+        url = escape(repository["html_url"], quote=True)
+        cards.append(f'<a href="{url}"><rect x="{x}" y="52" width="250" height="120" rx="8" fill="#24283b"/><text x="{x + 16}" y="78" fill="#7dcfff" font-family="Arial, sans-serif" font-size="14" font-weight="700">{name}</text><text x="{x + 16}" y="102" fill="#c0caf5" font-family="Arial, sans-serif" font-size="11">{description}</text><text x="{x + 16}" y="154" fill="#9ece6a" font-family="Arial, sans-serif" font-size="11">View project →</text></a>')
+    content = '<text x="24" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Featured Projects</text>' + "".join(cards)
+    (OUTPUT_DIR / "featured-projects.svg").write_text(svg_document(content, 850, 190))
+
+
 def write_contributions(total: int, weeks: list[int]) -> None:
     width, height = 1000, 250
     max_value = max(weeks) if weeks else 1
@@ -285,11 +394,15 @@ def write_streak(days: list[int]) -> None:
 def main() -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
     repositories = get_repositories()
-    total_contributions, weeks, days = get_contributions()
+    total_contributions, weeks, days, monthly = get_contributions()
     write_stats(repositories, total_contributions)
     write_languages(language_totals(repositories))
     write_repository_activity(repositories)
     write_project_activity(repositories)
+    write_monthly_contributions(monthly)
+    write_repository_health(repositories)
+    write_technology_timeline(repositories)
+    write_featured_projects(repositories)
     write_contributions(total_contributions, weeks)
     write_streak(days)
 
