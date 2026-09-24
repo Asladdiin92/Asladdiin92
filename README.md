@@ -126,8 +126,9 @@ Haramaya University
   <img src="https://streak-stats.demolab.com/?user=Asladdiin92&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
+### Dynamic Contribution Graph
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Asladdiin92&bg_color=1a1b27&color=7aa2f7&line=7dcfff&point=bb9af7&area=true&hide_border=true&theme=tokyo-night" alt="GitHub Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Asladdiin92&bg_color=1a1b27&color=7aa2f7&line=7dcfff&point=bb9af7&area=true&hide_border=true&theme=tokyo-night" alt="Dynamic GitHub Contribution Graph" />
 </p>
 
 ---
