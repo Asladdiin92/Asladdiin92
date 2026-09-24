@@ -1,12 +1,13 @@
-# Hi, I'm Asladdiin Abduqaadir 👋
+# Asladdiin Abduqaadir
 
 ### Full-Stack Developer | Java & Spring Boot | REST APIs | Database Design
 
-I build practical software that solves real-world problems, with a focus on backend engineering, APIs, database-driven applications, and maintainable system architecture.
+I build practical, maintainable software across backend and full-stack applications, with a focus on APIs, data, and real-world problem solving.
 
-Currently studying **Information Technology at Haramaya University** while building and improving software projects across web, backend, and full-stack development.
+**Information Technology student at Haramaya University** · **Open to internships, collaboration, and software projects**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Asladdiin92-181717?style=flat-square&logo=github)](https://github.com/Asladdiin92)
+[![Resume and portfolio](https://img.shields.io/badge/Resume%20%26%20Portfolio-asladin.me-2563EB?style=flat-square&logo=googlechrome&logoColor=white)](https://asladin.me)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:asladdiinabduqaadir@gmail.com)
 [![Analytics CI/CD](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml/badge.svg)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
 
