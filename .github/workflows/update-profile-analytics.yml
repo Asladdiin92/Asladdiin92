@@ -8,12 +8,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-profile-analytics
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
       - name: Check out profile repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Generate analytics SVGs
         env:
@@ -26,4 +32,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/*.svg
           git diff --cached --quiet || git commit -m "chore: update profile analytics"
+          git fetch origin main
+          git rebase origin/main
           git push
