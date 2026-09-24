@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./header.svg" width="100%" alt="Asladdiin Abduqaadir, full-stack developer and IT student" />
+</p>
+
 # Asladdiin Abduqaadir
 
 ### Full-Stack Developer | Java & Spring Boot | REST APIs | Database Design
