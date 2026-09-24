@@ -30,11 +30,7 @@ I build practical backend and full-stack software focused on APIs, data, and rea
 </p>
 
 <p align="center">
-  <img src="./assets/repository-activity.svg" width="100%" alt="Top repositories ranked by stars and forks" />
-</p>
-
-<p align="center">
-  <img src="./assets/monthly-contributions.svg" width="100%" alt="Monthly GitHub contribution trend" />
+  <img src="./assets/chart-gallery.svg" width="100%" alt="Analytics gallery with pie, radial, bar, area, and pyramid charts" />
 </p>
 
 <p align="center">

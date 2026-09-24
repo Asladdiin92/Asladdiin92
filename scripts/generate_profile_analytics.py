@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 import urllib.parse
 import urllib.request
@@ -108,6 +109,76 @@ def svg_document(content: str, width: int, height: int) -> str:
   {content}
 </svg>
 """
+
+
+def write_chart_gallery(totals: Counter[str], repositories: list[dict], monthly: list[tuple[str, int]]) -> None:
+    palette = ["#7aa2f7", "#7dcfff", "#9ece6a", "#f7768e", "#bb9af7"]
+    languages = totals.most_common(4)
+    language_total = sum(count for _, count in languages) or 1
+    pie_slices = []
+    angle = -math.pi / 2
+    for index, (language, count) in enumerate(languages):
+        next_angle = angle + (count / language_total) * math.tau
+        x1, y1 = 145 + 62 * math.cos(angle), 145 + 62 * math.sin(angle)
+        x2, y2 = 145 + 62 * math.cos(next_angle), 145 + 62 * math.sin(next_angle)
+        large_arc = 1 if next_angle - angle > math.pi else 0
+        pie_slices.append(
+            f'<path d="M 145 145 L {x1:.1f} {y1:.1f} A 62 62 0 {large_arc} 1 {x2:.1f} {y2:.1f} Z" fill="{palette[index]}"/>'
+            f'<text x="58" y="{238 + index * 14}" fill="{palette[index]}" font-family="Arial, sans-serif" font-size="11">{escape(language)} {count / language_total * 100:.0f}%</text>'
+        )
+        angle = next_angle
+
+    owned = [repository for repository in repositories if not repository.get("fork")]
+    top_repositories = sorted(owned, key=lambda repository: repository["stargazers_count"], reverse=True)[:5]
+    max_stars = max((repository["stargazers_count"] for repository in top_repositories), default=1) or 1
+    bars = []
+    for index, repository in enumerate(top_repositories):
+        y = 100 + index * 18
+        width = max(3, 180 * repository["stargazers_count"] / max_stars)
+        bars.append(
+            f'<text x="350" y="{y + 10}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="10">{escape(repository["name"][:18])}</text>'
+            f'<rect x="480" y="{y}" width="180" height="10" rx="5" fill="#24283b"/><rect x="480" y="{y}" width="{width:.1f}" height="10" rx="5" fill="#9ece6a"/>'
+            f'<text x="670" y="{y + 10}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="10">{repository["stargazers_count"]}</text>'
+        )
+
+    metric_values = [len(repositories), sum(repository["stargazers_count"] for repository in repositories), sum(repository["forks_count"] for repository in repositories)]
+    radial = []
+    for index, value in enumerate(metric_values):
+        radius = 54 - index * 15
+        circumference = math.tau * radius
+        progress = value / (max(metric_values) or 1)
+        radial.append(
+            f'<circle cx="850" cy="130" r="{radius}" fill="none" stroke="#24283b" stroke-width="10"/>'
+            f'<circle cx="850" cy="130" r="{radius}" fill="none" stroke="{palette[index]}" stroke-width="10" stroke-dasharray="{circumference * progress:.1f} {circumference:.1f}" transform="rotate(-90 850 130)"/>'
+        )
+
+    monthly_values = [value for _, value in monthly] or [0]
+    max_month = max(monthly_values) or 1
+    points = " ".join(f"{350 + index * 52:.1f},{235 - value / max_month * 70:.1f}" for index, value in enumerate(monthly_values))
+    area = f'<polygon points="350,235 {points} {350 + (len(monthly_values) - 1) * 52},235" fill="#7dcfff" opacity="0.22"/><polyline points="{points}" fill="none" stroke="#7dcfff" stroke-width="3"/>'
+
+    health_values = [len(owned), sum(repository.get("open_issues_count", 0) for repository in owned), sum(repository.get("forks_count", 0) for repository in owned)]
+    pyramid = []
+    for index, value in enumerate(health_values):
+        y = 235 - index * 25
+        half_width = 34 + index * 24
+        pyramid.append(f'<polygon points="850,{y} {850 - half_width},{y + 22} {850 + half_width},{y + 22}" fill="{palette[index + 1]}"/><text x="850" y="{y + 15}" text-anchor="middle" fill="#1a1b27" font-family="Arial, sans-serif" font-size="10">{value}</text>')
+
+    content = f"""
+  <text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Analytics Chart Gallery</text>
+  <text x="32" y="54" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">Language, reach, portfolio scale, contributions, and health</text>
+  <text x="32" y="86" fill="#7dcfff" font-family="Arial, sans-serif" font-size="13" font-weight="700">Language mix · pie</text>
+  {"".join(pie_slices)}
+  <text x="350" y="86" fill="#9ece6a" font-family="Arial, sans-serif" font-size="13" font-weight="700">Repository reach · bars</text>
+  {"".join(bars)}
+  <text x="760" y="86" fill="#bb9af7" font-family="Arial, sans-serif" font-size="13" font-weight="700">Portfolio scale · radial</text>
+  {"".join(radial)}
+  <text x="32" y="178" fill="#7dcfff" font-family="Arial, sans-serif" font-size="13" font-weight="700">Monthly peaks · area</text>
+  <line x1="350" y1="235" x2="714" y2="235" stroke="#414868"/>{area}
+  <text x="760" y="178" fill="#f7768e" font-family="Arial, sans-serif" font-size="13" font-weight="700">Health · pyramid</text>
+  {"".join(pyramid)}
+"""
+    (OUTPUT_DIR / "chart-gallery.svg").write_text(svg_document(content, 1000, 300))
 
 
 def write_stats(repositories: list[dict], total_contributions: int) -> None:
@@ -410,8 +481,10 @@ def main() -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
     repositories = get_repositories()
     total_contributions, weeks, days, monthly = get_contributions()
+    totals = language_totals(repositories)
     write_stats(repositories, total_contributions)
-    write_languages(language_totals(repositories))
+    write_languages(totals)
+    write_chart_gallery(totals, repositories, monthly)
     write_repository_activity(repositories)
     write_project_activity(repositories)
     write_monthly_contributions(monthly)
