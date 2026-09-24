@@ -2,7 +2,7 @@
 
 ### Full-Stack Developer | Java & Spring Boot | REST APIs | Database Design
 
-I build practical, maintainable software across backend and full-stack applications, with a focus on APIs, data, and real-world problem solving.
+I build practical backend and full-stack software focused on APIs, data, and real-world problems.
 
 **Information Technology student at Haramaya University** · **Open to internships, collaboration, and software projects**
 
@@ -45,14 +45,12 @@ I build practical, maintainable software across backend and full-stack applicati
 
 ## 🚀 Current Focus
 
-Building full-stack applications with a focus on **Java & Spring Boot, REST APIs, database design, system architecture, and practical problem solving.**
+Building practical applications with **Java, Spring Boot, REST APIs, and database design.**
 
-- Backend development with Java and Spring Boot
-- REST API design and integration
-- Relational database design and SQL
-- Application architecture and system design
-- Full-stack web application development
-- Building practical solutions for real users
+- Java and Spring Boot backend services
+- REST APIs and database-driven applications
+- Full-stack web development
+- Clean architecture and practical problem solving
 
 ## ✅ Engineering Signals
 
@@ -109,9 +107,9 @@ Tests, code coverage, deployment, and API documentation badges will be added to 
 
 ### 🎓 CCI Department Guidance
 
-A student-focused decision-support application designed to help students identify suitable academic departments based on their academic performance and preferences.
+Helps students identify suitable academic departments from their performance and preferences.
 
-**Focus:** Problem solving • User experience • Decision support
+**Focus:** Java • Spring Boot • Decision support
 
 [View Repository →](https://github.com/Asladdiin92/cci-department-guidance)
 
@@ -119,7 +117,7 @@ A student-focused decision-support application designed to help students identif
 
 ### 💻 Personal Portfolio
 
-A personal portfolio website created to showcase my projects, technical skills, experience, and development journey.
+Personal portfolio for showcasing projects, skills, and development work.
 
 **Focus:** Web development • Responsive UI • Personal branding
 
@@ -129,7 +127,7 @@ A personal portfolio website created to showcase my projects, technical skills, 
 
 ### 🔎 Blockchair T
 
-A technical project focused on working with structured data and building practical software around data exploration and application development.
+A data-focused application for exploring structured information and building practical tools around it.
 
 **Focus:** Data • Application development • Problem solving
 
@@ -139,14 +137,12 @@ A technical project focused on working with structured data and building practic
 
 ## 🧠 What I Enjoy Building
 
-I am particularly interested in software that involves:
+I enjoy building:
 
 - Backend services and APIs
 - Database-driven applications
-- Full-stack web applications
-- Automation and productivity tools
-- Systems that solve practical problems
-- Software for education and local communities
+- Full-stack products
+- Tools for education and local communities
 
 ---
 
