@@ -105,14 +105,33 @@ Haramaya University
 
 ---
 
-## 📈 GitHub
+## 📊 GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Asladdiin92&show_icons=true&hide_border=true&rank_icon=github" alt="Asladdiin's GitHub Stats" />
+  <strong>Recent activity, repository overview, and language distribution</strong>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Asladdiin92&layout=compact&hide_border=true" alt="Top Languages" />
+  <img src="./assets/github-stats.svg" width="100%" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
+</p>
+
+<p align="center">
+  <img src="./assets/top-languages.svg" width="100%" alt="Top programming languages by repository" />
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <img src="./assets/contributions.svg" width="100%" alt="GitHub contribution activity graph" />
+    </td>
+    <td align="center" valign="middle">
+      <img src="./assets/streak.svg" width="100%" alt="GitHub current and longest contribution streaks" />
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <sub>Analytics are generated from GitHub data and updated automatically by GitHub Actions.</sub>
 </p>
 
 ---
