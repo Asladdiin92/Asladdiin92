@@ -104,8 +104,25 @@ def svg_document(content: str, width: int, height: int) -> str:
 def write_stats(repositories: list[dict], total_contributions: int) -> None:
     stars = sum(repository["stargazers_count"] for repository in repositories)
     forks = sum(repository["forks_count"] for repository in repositories)
+    metrics = [
+        ("Repositories", len(repositories), "#7aa2f7"),
+        ("Contributions", total_contributions, "#7dcfff"),
+        ("Stars", stars, "#9ece6a"),
+        ("Forks", forks, "#f7768e"),
+    ]
+    scale = max((value for _, value, _ in metrics), default=1) or 1
+    bars = []
+    for index, (label, value, color) in enumerate(metrics):
+        y = 155 + index * 25
+        bar_width = max(4, 520 * value / scale) if value else 4
+        bars.append(
+            f'<text x="32" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{label}</text>'
+            f'<rect x="135" y="{y}" width="520" height="14" rx="7" fill="#24283b"/>'
+            f'<rect x="135" y="{y}" width="{bar_width:.1f}" height="14" rx="7" fill="{color}"/>'
+            f'<text x="675" y="{y + 12}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{value}</text>'
+        )
     content = f"""
-  <text x="32" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Overview</text>
+  <text x="32" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Metrics</text>
   <text x="32" y="88" fill="#7aa2f7" font-family="Arial, sans-serif" font-size="28" font-weight="700">{len(repositories)}</text>
   <text x="32" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Public repositories</text>
   <text x="210" y="88" fill="#7dcfff" font-family="Arial, sans-serif" font-size="28" font-weight="700">{total_contributions}</text>
@@ -114,8 +131,10 @@ def write_stats(repositories: list[dict], total_contributions: int) -> None:
   <text x="410" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Repository stars</text>
   <text x="610" y="88" fill="#f7768e" font-family="Arial, sans-serif" font-size="28" font-weight="700">{forks}</text>
   <text x="610" y="112" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Repository forks</text>
+  <text x="32" y="140" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">Relative comparison</text>
+  {"".join(bars)}
 """
-    (OUTPUT_DIR / "github-stats.svg").write_text(svg_document(content, 800, 145))
+    (OUTPUT_DIR / "github-stats.svg").write_text(svg_document(content, 800, 270))
 
 
 def write_languages(totals: Counter[str]) -> None:
