@@ -187,7 +187,7 @@ def write_stats(total_contributions: int, totals: Counter[str]) -> None:
     total_bytes = sum(count for _, count in top_languages) or 1
     language_rows = []
     for index, (language, count) in enumerate(top_languages):
-        y = 112 + index * 24
+        y = 116 + index * 32
         percent = count / total_bytes * 100
         language_rows.append(
             f'<text x="360" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="13">{escape(language)}</text>'
@@ -196,13 +196,33 @@ def write_stats(total_contributions: int, totals: Counter[str]) -> None:
             f'<text x="935" y="{y + 12}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">{percent:.1f}%</text>'
         )
     content = f"""
-  <text x="32" y="38" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Contributions &amp; Languages</text>
-  <text x="32" y="82" fill="#7dcfff" font-family="Arial, sans-serif" font-size="34" font-weight="700">{total_contributions}</text>
-    <text x="32" y="101" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">contributions in the last year</text>
-    <text x="150" y="92" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">Primary language distribution</text>
+<<<<<<< HEAD
+    <text x="40" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="22" font-weight="700">GitHub Analytics</text>
+    <line x1="40" y1="62" x2="960" y2="62" stroke="#30364d"/>
+    <text x="40" y="105" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="14">Contributions in the last year</text>
+    <text x="40" y="160" fill="#7dcfff" font-family="Arial, sans-serif" font-size="52" font-weight="700">{total_contributions}</text>
+    <text x="40" y="190" fill="#c0caf5" font-family="Arial, sans-serif" font-size="13">A snapshot of consistent activity</text>
+    <line x1="300" y1="82" x2="300" y2="270" stroke="#30364d"/>
+    <text x="360" y="94" fill="#c0caf5" font-family="Arial, sans-serif" font-size="14" font-weight="700">Primary language distribution</text>
   {"".join(language_rows)}
+    <text x="40" y="275" fill="#6f7895" font-family="Arial, sans-serif" font-size="11">Updated automatically from GitHub data</text>
 """
-    (OUTPUT_DIR / "github-stats.svg").write_text(svg_document(content, 800, 245))
+        document = svg_document(content, 1000, 310).replace("\n    \n", "\n")
+        (OUTPUT_DIR / "github-stats.svg").write_text(document)
+=======
+    <text x="40" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="22" font-weight="700">GitHub Analytics</text>
+    <line x1="40" y1="62" x2="960" y2="62" stroke="#30364d"/>
+    <text x="40" y="105" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="14">Contributions in the last year</text>
+    <text x="40" y="160" fill="#7dcfff" font-family="Arial, sans-serif" font-size="52" font-weight="700">{total_contributions}</text>
+    <text x="40" y="190" fill="#c0caf5" font-family="Arial, sans-serif" font-size="13">A snapshot of consistent activity</text>
+    <line x1="300" y1="82" x2="300" y2="270" stroke="#30364d"/>
+    <text x="360" y="94" fill="#c0caf5" font-family="Arial, sans-serif" font-size="14" font-weight="700">Primary language distribution</text>
+  {"".join(language_rows)}
+    <text x="40" y="275" fill="#6f7895" font-family="Arial, sans-serif" font-size="11">Updated automatically from GitHub data</text>
+    """
+    document = svg_document(content, 1000, 310).replace("\n    \n", "\n")
+    (OUTPUT_DIR / "github-stats.svg").write_text(document)
+>>>>>>> 21fe39e (fix: add breathing room to stats card)
 
 
 def write_languages(totals: Counter[str]) -> None:
