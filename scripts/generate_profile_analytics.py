@@ -206,56 +206,53 @@ def write_repository_activity(repositories: list[dict]) -> None:
 def write_project_activity(repositories: list[dict]) -> None:
     owned = [repository for repository in repositories if not repository.get("fork")]
     recent = sorted(owned, key=lambda repository: repository.get("pushed_at") or "", reverse=True)[:6]
-    max_size = max((repository.get("size", 0) for repository in recent), default=1) or 1
     rows = []
     for index, repository in enumerate(recent):
-        y = 62 + index * 38
+        y = 62 + index * 30
         name = escape(repository["name"][:25])
         language = escape(repository.get("language") or "Not specified")
         pushed_at = (repository.get("pushed_at") or "Unknown")[:10]
         issues = repository.get("open_issues_count", 0)
         size = repository.get("size", 0)
-        size_width = max(4, 220 * size / max_size) if size else 4
+        issue_color = "#f7768e" if issues else "#9ece6a"
         rows.append(
-            f'<text x="32" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{name}</text>'
-            f'<text x="245" y="{y + 12}" fill="#7dcfff" font-family="Arial, sans-serif" font-size="12">{pushed_at}</text>'
-            f'<text x="360" y="{y + 12}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{language}</text>'
-            f'<rect x="520" y="{y}" width="220" height="12" rx="6" fill="#24283b"/>'
-            f'<rect x="520" y="{y}" width="{size_width:.1f}" height="12" rx="6" fill="#7aa2f7"/>'
-            f'<text x="750" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{size} KB</text>'
-            f'<text x="830" y="{y + 11}" fill="#f7768e" font-family="Arial, sans-serif" font-size="12">{issues} issues</text>'
+            f'<circle cx="38" cy="{y + 7}" r="5" fill="{issue_color}"/>'
+            f'<text x="52" y="{y + 11}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{name}</text>'
+            f'<text x="270" y="{y + 11}" fill="#7dcfff" font-family="Arial, sans-serif" font-size="12">{pushed_at}</text>'
+            f'<text x="390" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{language}</text>'
+            f'<text x="560" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{size} KB</text>'
+            f'<text x="700" y="{y + 11}" fill="{issue_color}" font-family="Arial, sans-serif" font-size="12">{issues} open issues</text>'
         )
     content = (
         '<text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Project Activity</text>'
-        '<text x="245" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Last push</text>'
-        '<text x="360" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Language</text>'
-        '<text x="520" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Repository size</text>'
-        '<text x="830" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Open issues</text>'
+        '<text x="52" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Repository</text>'
+        '<text x="270" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Last push</text>'
+        '<text x="390" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Language</text>'
+        '<text x="560" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Size</text>'
+        '<text x="700" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Issues</text>'
         + "".join(rows)
     )
-    height = 70 + max(1, len(recent)) * 38
+    height = 70 + max(1, len(recent)) * 30
     (OUTPUT_DIR / "project-activity.svg").write_text(svg_document(content, 950, height))
 
 
 def write_monthly_contributions(monthly: list[tuple[str, int]]) -> None:
-    width, height = 900, 250
-    values = [value for _, value in monthly] or [0]
-    max_value = max(values) or 1
-    points = []
-    labels = []
+    width, height = 900, 180
+    max_value = max((value for _, value in monthly), default=1) or 1
+    cells = []
     for index, (month, value) in enumerate(monthly):
-        x = 48 + index * (804 / max(1, len(monthly) - 1))
-        y = 190 - (value / max_value * 120)
-        points.append(f"{x:.1f},{y:.1f}")
-        labels.append(f'<text x="{x:.1f}" y="214" text-anchor="middle" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">{month}</text>')
-    line = " ".join(points)
+        x = 48 + index * 68
+        intensity = value / max_value
+        color = "#24283b" if not value else ("#7dcfff" if intensity > 0.66 else "#477da8" if intensity > 0.33 else "#31556f")
+        cells.append(
+            f'<text x="{x + 25}" y="78" text-anchor="middle" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">{month}</text>'
+            f'<rect x="{x}" y="92" width="50" height="50" rx="8" fill="{color}"/>'
+            f'<text x="{x + 25}" y="122" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="700">{value}</text>'
+        )
     content = f"""
-  <text x="32" y="32" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Monthly Contribution Trend</text>
-  <text x="32" y="56" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Contribution totals by month</text>
-  <line x1="48" y1="190" x2="852" y2="190" stroke="#414868"/>
-  <polygon points="48,190 {line} 852,190" fill="#7aa2f7" opacity="0.25"/>
-  <polyline points="{line}" fill="none" stroke="#7dcfff" stroke-width="3"/>
-  {"".join(labels)}
+  <text x="32" y="32" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Monthly Contribution Heatmap</text>
+  <text x="32" y="56" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Darker cells indicate fewer contributions</text>
+  {"".join(cells)}
 """
     (OUTPUT_DIR / "monthly-contributions.svg").write_text(svg_document(content, width, height))
 

@@ -10,7 +10,7 @@ Currently studying **Information Technology at Haramaya University** while build
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:asladdiinabduqaadir@gmail.com)
 [![Analytics CI/CD](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml/badge.svg)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
 
-> Resume link coming soon.
+[Resume and portfolio](https://asladin.me)
 
 ---
 
