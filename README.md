@@ -25,6 +25,10 @@ Currently studying **Information Technology at Haramaya University** while build
   <img src="./assets/top-languages.svg" width="100%" alt="Top programming languages by repository" />
 </p>
 
+<p align="center">
+  <img src="./assets/repository-activity.svg" width="100%" alt="Top repositories ranked by stars and forks" />
+</p>
+
 <table align="center">
   <tr>
     <td align="center" valign="middle">

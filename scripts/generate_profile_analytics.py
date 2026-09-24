@@ -155,6 +155,45 @@ def write_languages(totals: Counter[str]) -> None:
     (OUTPUT_DIR / "top-languages.svg").write_text(svg_document(content, 800, 48 + max(1, len(top)) * 32))
 
 
+def write_repository_activity(repositories: list[dict]) -> None:
+    owned = [repository for repository in repositories if not repository.get("fork")]
+    top = sorted(
+        owned,
+        key=lambda repository: (
+            repository["stargazers_count"] + repository["forks_count"],
+            repository["stargazers_count"],
+        ),
+        reverse=True,
+    )[:6]
+    max_stars = max((repository["stargazers_count"] for repository in top), default=1) or 1
+    max_forks = max((repository["forks_count"] for repository in top), default=1) or 1
+    rows = []
+    for index, repository in enumerate(top):
+        y = 62 + index * 38
+        name = escape(repository["name"][:28])
+        stars = repository["stargazers_count"]
+        forks = repository["forks_count"]
+        star_width = max(4, 250 * stars / max_stars) if stars else 4
+        fork_width = max(4, 250 * forks / max_forks) if forks else 4
+        rows.append(
+            f'<text x="32" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="12">{name}</text>'
+            f'<rect x="250" y="{y}" width="250" height="12" rx="6" fill="#24283b"/>'
+            f'<rect x="250" y="{y}" width="{star_width:.1f}" height="12" rx="6" fill="#9ece6a"/>'
+            f'<text x="510" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{stars} stars</text>'
+            f'<rect x="650" y="{y}" width="100" height="12" rx="6" fill="#24283b"/>'
+            f'<rect x="650" y="{y}" width="{max(4, 100 * forks / max_forks) if forks else 4:.1f}" height="12" rx="6" fill="#f7768e"/>'
+            f'<text x="760" y="{y + 11}" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="12">{forks} forks</text>'
+        )
+    content = (
+        '<text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Repository Visibility</text>'
+        '<text x="250" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Stars</text>'
+        '<text x="650" y="48" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="11">Forks</text>'
+        + "".join(rows)
+    )
+    height = 70 + max(1, len(top)) * 38
+    (OUTPUT_DIR / "repository-activity.svg").write_text(svg_document(content, 850, height))
+
+
 def write_contributions(total: int, weeks: list[int]) -> None:
     width, height = 1000, 250
     max_value = max(weeks) if weeks else 1
@@ -215,6 +254,7 @@ def main() -> None:
     total_contributions, weeks, days = get_contributions()
     write_stats(repositories, total_contributions)
     write_languages(language_totals(repositories))
+    write_repository_activity(repositories)
     write_contributions(total_contributions, weeks)
     write_streak(days)
 
