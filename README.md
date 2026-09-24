@@ -17,22 +17,24 @@ Currently studying **Information Technology at Haramaya University** while build
   <strong>Recent activity, repository overview, and language distribution</strong>
 </p>
 
+<p align="center">
+  <img src="./assets/github-stats.svg" width="100%" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
+</p>
+
+<p align="center">
+  <img src="./assets/top-languages.svg" width="100%" alt="Top programming languages by repository" />
+</p>
+
 <table align="center">
   <tr>
     <td align="center" valign="middle">
-      <img src="./assets/github-stats.svg" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
+      <img src="./assets/contributions.svg" width="100%" alt="GitHub contribution activity graph" />
     </td>
     <td align="center" valign="middle">
-      <img src="./assets/top-languages.svg" alt="Top programming languages by repository" />
+      <img src="./assets/streak.svg" width="100%" alt="GitHub current and longest contribution streaks" />
     </td>
   </tr>
 </table>
-
-<h3 align="center">Contribution Activity</h3>
-
-<p align="center">
-  <img src="./assets/contributions.svg" alt="GitHub contribution activity graph" />
-</p>
 
 <p align="center">
   <sub>Analytics are generated from GitHub data and updated automatically by GitHub Actions.</sub>

@@ -51,7 +51,7 @@ def get_repositories() -> list[dict]:
     return repositories
 
 
-def get_contributions() -> tuple[int, list[int]]:
+def get_contributions() -> tuple[int, list[int], list[int]]:
     query = """
     query($login: String!) {
       user(login: $login) {
@@ -73,11 +73,13 @@ def get_contributions() -> tuple[int, list[int]]:
         payload={"query": query, "variables": {"login": USERNAME}},
     )
     calendar = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]
-    weeks = [
-        sum(day["contributionCount"] for day in week["contributionDays"])
-        for week in calendar["weeks"]
-    ]
-    return calendar["totalContributions"], weeks
+    weeks = []
+    days = []
+    for week in calendar["weeks"]:
+        week_days = [day["contributionCount"] for day in week["contributionDays"]]
+        weeks.append(sum(week_days))
+        days.extend(week_days)
+    return calendar["totalContributions"], weeks, days
 
 
 def language_totals(repositories: list[dict]) -> Counter[str]:
@@ -131,7 +133,7 @@ def write_languages(totals: Counter[str]) -> None:
             f'<text x="350" y="{y + 12}" fill="#c0caf5" font-family="Arial, sans-serif" font-size="13">{escape(language)} {percent:.1f}%</text>'
         )
     content = '<text x="32" y="30" fill="#bb9af7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Top Languages by Repository</text>' + "".join(bars)
-    (OUTPUT_DIR / "top-languages.svg").write_text(svg_document(content, 620, 48 + max(1, len(top)) * 32))
+    (OUTPUT_DIR / "top-languages.svg").write_text(svg_document(content, 800, 48 + max(1, len(top)) * 32))
 
 
 def write_contributions(total: int, weeks: list[int]) -> None:
@@ -154,13 +156,48 @@ def write_contributions(total: int, weeks: list[int]) -> None:
     (OUTPUT_DIR / "contributions.svg").write_text(svg_document(content, width, height))
 
 
+def streak_metrics(days: list[int]) -> tuple[int, int]:
+    longest = 0
+    current = 0
+    run = 0
+    for count in days:
+        if count > 0:
+            run += 1
+            longest = max(longest, run)
+        else:
+            run = 0
+
+    for count in reversed(days):
+        if count == 0:
+            break
+        current += 1
+    return current, longest
+
+
+def write_streak(days: list[int]) -> None:
+    current, longest = streak_metrics(days)
+    content = f"""
+  <text x="32" y="42" fill="#bb9af7" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Streak</text>
+  <line x1="200" y1="24" x2="200" y2="122" stroke="#414868"/>
+  <line x1="400" y1="24" x2="400" y2="122" stroke="#414868"/>
+  <text x="90" y="76" fill="#7aa2f7" font-family="Arial, sans-serif" font-size="30" font-weight="700">{current}</text>
+  <text x="48" y="101" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Current streak</text>
+  <text x="286" y="76" fill="#7dcfff" font-family="Arial, sans-serif" font-size="30" font-weight="700">{longest}</text>
+  <text x="245" y="101" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Longest streak</text>
+  <text x="500" y="68" fill="#9ece6a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Keep building</text>
+  <text x="500" y="96" fill="#a9b1d6" font-family="Arial, sans-serif" font-size="13">Consistent progress matters.</text>
+"""
+    (OUTPUT_DIR / "streak.svg").write_text(svg_document(content, 800, 145))
+
+
 def main() -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
     repositories = get_repositories()
-    total_contributions, weeks = get_contributions()
+    total_contributions, weeks, days = get_contributions()
     write_stats(repositories, total_contributions)
     write_languages(language_totals(repositories))
     write_contributions(total_contributions, weeks)
+    write_streak(days)
 
 
 if __name__ == "__main__":
