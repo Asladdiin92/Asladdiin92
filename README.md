@@ -14,8 +14,7 @@
 ---
 <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=7CFFB2&center=true&vCenter=true&width=850&lines=Full-Stack+Developer;Java+Backend+Engineer;API+%26+System+Design;Database+Design+%26+Architecture;Building+Practical%2C+Maintainable+Software" alt="Full-Stack Developer, Java Backend Engineer, API and System Design, Database Design and Architecture" /> </p>
 
-<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=15&duration=4500&pause=1200&color=9CA3AF&center=true&vCenter=true&width=850&lines=I+build+practical%2C+maintainable+software+with+a+focus+on+backend+engineering.;I+design+database-driven+applications+and+full-stack+products." alt="I build practical, maintainable software with a focus on backend engineering, database-driven applications, and full-stack products." /> </p>Full-Stack Developer · Java Backend · APIs · System Design · Databases
-
+<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=15&duration=4500&pause=1200&color=9CA3AF&center=true&vCenter=true&width=850&lines=I+build+practical%2C+maintainable+software+with+a+focus+on+backend+engineering.;I+design+database-driven+applications+and+full-stack+products." alt="I build practical, maintainable software with a focus on backend engineering, database-driven applications, and full-stack products." /> 
 
 
 ## About Me
