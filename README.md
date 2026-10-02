@@ -23,13 +23,12 @@
   <img src="./assets/github-stats.svg" width="100%" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
 </p>
 
-<p align="center">
+<p align="center">GitHub contribution streak card</p>
+<p>
   <img src="https://streak-stats.demolab.com/?user=asladdiin92" alt="GitHub contribution streak statistics for asladdiin92" />
 </p>
 
-<p align="center">
-  <sub>Analytics are generated from GitHub data and updated automatically by GitHub Actions.</sub>
-</p>
+
 
 ---
 
