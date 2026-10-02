@@ -27,6 +27,7 @@
   <sub>Analytics are generated from GitHub data and updated automatically by GitHub Actions.</sub>
 </p>
 
+https://streak-stats.demolab.com/?user=asladdiin92
 ---
 
 ## ✅ Engineering Signals
