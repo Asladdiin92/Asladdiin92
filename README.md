@@ -41,7 +41,7 @@
 
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=asladdiin92" alt="GitHub contribution streak statistics for asladdiin92" />
+  <img src="https://streak-stats.demolab.com/?user=asladdiin92" width="100%" alt="GitHub contribution streak statistics for asladdiin92" />
 </p>
 
 
