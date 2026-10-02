@@ -12,171 +12,17 @@
 [Resume and portfolio](https://asladin.me)
 
 ---
+<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=7CFFB2&center=true&vCenter=true&width=850&lines=Full-Stack+Developer;Java+Backend+Engineer;API+%26+System+Design;Database+Design+%26+Architecture;Building+Practical%2C+Maintainable+Software" alt="Full-Stack Developer, Java Backend Engineer, API and System Design, Database Design and Architecture" /> </p>
 
-## 📊 GitHub Analytics
+<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=15&duration=4500&pause=1200&color=9CA3AF&center=true&vCenter=true&width=850&lines=I+build+practical%2C+maintainable+software+with+a+focus+on+backend+engineering.;I+design+database-driven+applications+and+full-stack+products." alt="I build practical, maintainable software with a focus on backend engineering, database-driven applications, and full-stack products." /> </p>Full-Stack Developer · Java Backend · APIs · System Design · Databases
 
-<p align="center">
-  <strong>Contribution activity and primary language distribution</strong>
-</p>
 
-<p align="center">
-  <img src="./assets/github-stats.svg" width="100%" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
-</p>
 
----
 
 ## ✅ Engineering Signals
 
 [![Analytics workflow](https://img.shields.io/github/actions/workflow/status/Asladdiin92/Asladdiin92/update-profile-analytics.yml?label=CI%2FCD&logo=github-actions&logoColor=white)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
 
-Tests, code coverage, deployment, and API documentation badges will be added to projects that expose those checks and services.
-
-## 📌 Repository Strategy
-
-- **Spring Boot API:** [cci-department-guidance](https://github.com/Asladdiin92/cci-department-guidance)
-- **Full-stack application:** [portfolio](https://github.com/Asladdiin92/portfolio)
-- **Database-focused project:** [blockchair-t](https://github.com/Asladdiin92/blockchair-t)
-
---- 
-<p align="center">treak measures the number of consecutive days you actively commit code or engage with repositories on GitHub without skipping a single day</p>
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=asladdiin92" width="100%" alt="GitHub contribution streak statistics for asladdiin92" />
-</p>
-
-
-
-
-## 🛠️ Tech Stack
-
-### Frontend
-
-![React 19](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
-
-### Backend
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
-
-### Database & Infra
-
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![ioredis](https://img.shields.io/badge/ioredis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
-
-### Tools & Monorepo
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![VB.NET](https://img.shields.io/badge/VB.NET-512BD4?style=flat-square&logo=.net&logoColor=white)
-
----
-
-## 📌 Featured Projects
-
-### 🎓 CCI Department Guidance
-
-Student department guidance system | Tech Stack: React, Express, Supabase, Node.js | [Repository](https://github.com/Asladdiin92/cci-department-guidance)
-
-[View Repository →](https://github.com/Asladdiin92/cci-department-guidance)
-
----
-
-### 💻 Personal Portfolio
-
-Developer portfolio and personal branding site | Tech Stack: HTML, CSS, JavaScript | [Live site](https://asladin.me)
-
-[View Repository →](https://github.com/Asladdiin92/portfolio)
-
----
-
-### 🔎 Blockchair T
-
-Structured-data exploration application | Tech Stack: C++, data processing, application design | [Repository](https://github.com/Asladdiin92/blockchair-t)
-
-[View Repository →](https://github.com/Asladdiin92/blockchair-t)
-
----
-
-## 🧠 What I Enjoy Building
-
-I enjoy building:
-
-- Backend services and APIs
-- Database-driven applications
-- Full-stack products
-- Tools for education and local communities
-
----
-
-## 🎓 Education
-
-**Bachelor of Science in Information Technology**
-
-Haramaya University
-
----
-
-## 🤝 Let's Connect
-
-- **GitHub:** [@Asladdiin92](https://github.com/Asladdiin92)
-- **Email:** [asladdiinabduqaadir@gmail.com](mailto:asladdiinabduqaadir@gmail.com)
-- **Portfolio:** [asladin.me](https://asladin.me)
-
-I'm open to **collaboration, interesting software projects, and opportunities to learn and build useful products.**
-
----
-
-<p align="center">
-  <i>Build. Learn. Improve. Repeat.</i>
-</p>
-
-
-
-
-
-
-
-
-<p align="center">
-  <img src="./header.svg" width="100%" alt="Asladdiin Abduqaadir — Full-Stack Developer" />
-</p>
-
-<h1 align="center">Hi, I'm Asladdiin Abduqaadir 👋</h1>
-
-<p align="center">
-  <strong>Full-Stack Developer · Java Backend · APIs · System Design · Databases</strong>
-</p>
-
-<p align="center">
-  I build practical, maintainable software with a focus on backend engineering,
-  database-driven applications, and full-stack products.
-</p>
-
-<p align="center">
-  <a href="https://asladin.me">
-    <img src="https://img.shields.io/badge/Portfolio-asladin.me-2563EB?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" />
-  </a>
-  <a href="https://github.com/Asladdiin92">
-    <img src="https://img.shields.io/badge/GitHub-Asladdiin92-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="mailto:asladdiinabduqaadir@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</p>
-
----
 
 ## About Me
 
@@ -271,35 +117,40 @@ A structured-data exploration and processing project focused on application desi
 
 ---
 
-## Tech Stack
-
-### Backend
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square\&logo=nodedotjs\&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square\&logo=express\&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)
+## 🛠️ Tech Stack
 
 ### Frontend
 
-![React](https://img.shields.io/badge/React-20232A?style=flat-square\&logo=react\&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square\&logo=vite\&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white)
+![React 19](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 
-### Databases & Infrastructure
+### Backend
 
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square\&logo=mongodb\&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square\&logo=redis\&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square\&logo=supabase\&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
 
-### Tools
+### Database & Infra
 
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square\&logo=github\&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square\&logo=pnpm\&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square\&logo=cplusplus\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![ioredis](https://img.shields.io/badge/ioredis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
 
+### Tools & Monorepo
+
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![VB.NET](https://img.shields.io/badge/VB.NET-512BD4?style=flat-square&logo=.net&logoColor=white)
 ---
 
 ## Engineering Principles
