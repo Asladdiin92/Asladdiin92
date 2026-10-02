@@ -23,29 +23,6 @@
   <img src="./assets/github-stats.svg" width="100%" alt="GitHub overview showing public repositories, contributions, stars, and forks" />
 </p>
 
-
-
-
-<!-- Wrap your code inside a container div -->
-<div align="center">
-  <h3>GitHub contribution streak card</h3>
-  <img src="https://demolab.com" alt="GitHub contribution streak statistics for asladdiin92" />
-</div>
-
-<div align="center">
-  <h3>GitHub contribution streak card</h3>
-  <img src="https://demolab.com" width="100%" alt="GitHub contribution streak statistics for asladdiin92" />
-</div>
-
-
-
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=asladdiin92" width="100%" alt="GitHub contribution streak statistics for asladdiin92" />
-</p>
-
-
-
 ---
 
 ## ✅ Engineering Signals
@@ -60,7 +37,14 @@ Tests, code coverage, deployment, and API documentation badges will be added to 
 - **Full-stack application:** [portfolio](https://github.com/Asladdiin92/portfolio)
 - **Database-focused project:** [blockchair-t](https://github.com/Asladdiin92/blockchair-t)
 
----
+--- 
+<p align="center">treak measures the number of consecutive days you actively commit code or engage with repositories on GitHub without skipping a single day</p>
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=asladdiin92" width="100%" alt="GitHub contribution streak statistics for asladdiin92" />
+</p>
+
+
+
 
 ## 🛠️ Tech Stack
 
