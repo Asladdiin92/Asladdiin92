@@ -24,7 +24,15 @@
 </p>
 
 <p align="center">GitHub contribution streak card</p>
-<p>
+
+<!-- Wrap your code inside a container div -->
+<div class="streak-container">
+  <p class="streak-title">GitHub contribution streak card</p>
+  <img src="https://streak-stats.demolab.com/?user=asladdiin92" alt="GitHub contribution streak statistics for asladdiin92" />
+</div>
+
+
+<p align="center">
   <img src="https://streak-stats.demolab.com/?user=asladdiin92" alt="GitHub contribution streak statistics for asladdiin92" />
 </p>
 
