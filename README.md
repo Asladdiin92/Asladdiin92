@@ -32,6 +32,12 @@
   <img src="https://demolab.com" alt="GitHub contribution streak statistics for asladdiin92" />
 </div>
 
+<div align="center">
+  <h3>GitHub contribution streak card</h3>
+  <img src="https://demolab.com" width="100%" alt="GitHub contribution streak statistics for asladdiin92" />
+</div>
+
+
 
 
 <p align="center">
