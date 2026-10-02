@@ -18,12 +18,6 @@
 
 
 
-
-## ✅ Engineering Signals
-
-[![Analytics workflow](https://img.shields.io/github/actions/workflow/status/Asladdiin92/Asladdiin92/update-profile-analytics.yml?label=CI%2FCD&logo=github-actions&logoColor=white)](https://github.com/Asladdiin92/Asladdiin92/actions/workflows/update-profile-analytics.yml)
-
-
 ## About Me
 
 I'm an Information Technology student and developer focused on building real-world software systems.
