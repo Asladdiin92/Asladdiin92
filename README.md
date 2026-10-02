@@ -24,6 +24,28 @@
 </p>
 
 <p align="center">GitHub contribution streak card</p>
+/* Stack them vertically and center everything */
+.streak-container {
+  display: flex;
+  flex-direction: column; /* Stacks the text on top of the image */
+  align-items: center;    /* Centers items horizontally */
+  justify-content: center;/* Centers items vertically if container has height */
+  gap: 15px;              /* Adds a clean space between text and image */
+  width: 100%;            /* Spans full width of its parent */
+}
+
+.streak-title {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Ensure the streak card image scales nicely */
+.streak-container img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 <!-- Wrap your code inside a container div -->
 <div class="streak-container">
