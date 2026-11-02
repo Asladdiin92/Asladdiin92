@@ -33,6 +33,8 @@ My current engineering focus is:
 I enjoy taking an idea from **requirements → architecture → implementation → database → API → user interface**.
 
 ---
+## Live URL projects
+https://academic-bice.vercel.app/
 
 ## Engineering Focus
 
