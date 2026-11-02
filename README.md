@@ -35,7 +35,8 @@ I enjoy taking an idea from **requirements → architecture → implementation �
 ---
 ## Live URL projects
 https://academic-bice.vercel.app/
-
+https://cci-department-guidance.vercel.app/
+https://blockchair-test.vercel.app/
 ## Engineering Focus
 
 <table>
